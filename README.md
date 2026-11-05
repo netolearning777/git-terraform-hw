@@ -35,7 +35,19 @@
 │ 
 │ All resource blocks must have 2 labels (type, name).
 ```
-Означает, что в файле main.tf в ресурсе "docker_image" не определено имя ресурса.
+Означает, что в файле main.tf ресурсу "docker_image" определен только тип, но не определено имя ресурса в проекте.
+
+```markdown
+│ Error: Invalid resource name
+│ 
+│   on main.tf line 28, in resource "docker_container" "1nginx":
+│   28: resource "docker_container" "1nginx" {
+│ 
+│ A name must start with a letter or underscore and may contain only letters, digits,
+│ underscores, and dashes.
+```
+Означает, что в файле main.tf имя ресурса должно начинаться с буквы или знака подчеркивания и может содержать только буквы, цифры, знаки подчеркивания и дефисы.
+
 </em>
 
 6. Выполните код. В качестве ответа приложите: исправленный фрагмент кода и вывод команды ```docker ps```.
