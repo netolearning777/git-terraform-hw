@@ -27,7 +27,15 @@
 <em>
 
 **Допущенные ошибки:**
- - `*.tfstate`
+```markdown
+│ Error: Missing name for resource
+│ 
+│   on main.tf line 23, in resource "docker_image":
+│   23: resource "docker_image" {
+│ 
+│ All resource blocks must have 2 labels (type, name).
+```
+Означает, что в файле main.tf в ресурсе "docker_image" не определено имя ресурса.
 </em>
 
 6. Выполните код. В качестве ответа приложите: исправленный фрагмент кода и вывод команды ```docker ps```.
