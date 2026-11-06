@@ -27,7 +27,7 @@
 <em>
 
 **Допущенные ошибки:**
-```
+```markdown
 │ Error: Missing name for resource
 │ 
 │   on main.tf line 23, in resource "docker_image":
@@ -37,7 +37,7 @@
 ```
 Означает, что в файле main.tf ресурсу "docker_image" определен только тип, но не определено имя ресурса в проекте.
 
-```
+```markdown
 │ Error: Invalid resource name
 │ 
 │   on main.tf line 28, in resource "docker_container" "1nginx":
@@ -78,6 +78,17 @@
 ![]()
 
 9. Объясните, почему при этом не был удалён docker-образ **nginx:latest**. Ответ **ОБЯЗАТЕЛЬНО НАЙДИТЕ В ПРЕДОСТАВЛЕННОМ КОДЕ**, а затем **ОБЯЗАТЕЛЬНО ПОДКРЕПИТЕ** строчкой из документации [**terraform провайдера docker**](https://library.tf/providers/kreuzwerker/docker/latest).  (ищите в классификаторе resource docker_image )
+<em>
+
+```hcl
+resource "docker_image" "nginx" {
+  name         = "nginx:latest"
+  keep_locally = true
+}
+```
+**`keep_locally = true`** — параметр указывает Terraform не удалять Docker-образ с хост-машины при уничтожении инфраструктуры. Образ останется в локальном кэше Docker.
+
+</em>
 
 ------
 
