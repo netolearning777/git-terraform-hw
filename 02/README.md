@@ -55,6 +55,9 @@ resource "yandex_compute_instance" "platform" {
 2. Объявите нужные переменные в файле variables.tf, обязательно указывайте тип переменной. Заполните их **default** прежними значениями из main.tf. 
 3. Проверьте terraform plan. Изменений быть не должно. 
 
+[variables.tf]()
+
+[main.tf]()
 
 ### Задание 3
 
