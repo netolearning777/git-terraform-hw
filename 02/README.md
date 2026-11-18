@@ -29,7 +29,8 @@ resource "yandex_compute_instance" "platform" {
 
 </em>
 
-[]()
+![](https://github.com/netolearning777/git-terraform-hw/blob/main/02/img/2026-11-18_14-38-47.png)
+
 
 6. Подключитесь к консоли ВМ через ssh и выполните команду ``` curl ifconfig.me```.
 Примечание: К OS ubuntu "out of a box, те из коробки" необходимо подключаться под пользователем ubuntu: ```"ssh ubuntu@vm_ip_address"```. Предварительно убедитесь, что ваш ключ добавлен в ssh-агент: ```eval $(ssh-agent) && ssh-add``` Вы познакомитесь с тем как при создании ВМ создать своего пользователя в блоке metadata в следующей лекции.;
