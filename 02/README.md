@@ -10,19 +10,27 @@
 4. Инициализируйте проект, выполните код. Исправьте намеренно допущенные синтаксические ошибки. Ищите внимательно, посимвольно. Ответьте, в чём заключается их суть.
 
 <em>
-Ошибки:
+Ошибки в main.tf:
 
-- в main.tf параметр platform_id исправлен на "standart-v3"
+- параметр platform_id исправлен на "standart-v3"
+- параметр core_fraction исправлен на 50
+- параметр cores исправлен на 2
    
 ```hcl
 resource "yandex_compute_instance" "platform" {
   name        = "netology-develop-platform-web"
   platform_id = "standart-v3"
+  resources {
+    cores         = 2
+    memory        = 1
+    core_fraction = 50
+  }
 ```
 
-
 </em>
-    
+
+[]()
+
 6. Подключитесь к консоли ВМ через ssh и выполните команду ``` curl ifconfig.me```.
 Примечание: К OS ubuntu "out of a box, те из коробки" необходимо подключаться под пользователем ubuntu: ```"ssh ubuntu@vm_ip_address"```. Предварительно убедитесь, что ваш ключ добавлен в ssh-агент: ```eval $(ssh-agent) && ssh-add``` Вы познакомитесь с тем как при создании ВМ создать своего пользователя в блоке metadata в следующей лекции.;
 8. Ответьте, как в процессе обучения могут пригодиться параметры ```preemptible = true``` и ```core_fraction=5``` в параметрах ВМ.
