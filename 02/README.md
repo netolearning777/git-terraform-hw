@@ -47,17 +47,11 @@ resource "yandex_compute_instance" "platform" {
 
 </em>
 
-
-
 ### Задание 2
 
 1. Замените все хардкод-**значения** для ресурсов **yandex_compute_image** и **yandex_compute_instance** на **отдельные** переменные. К названиям переменных ВМ добавьте в начало префикс **vm_web_** .  Пример: **vm_web_name**.
 2. Объявите нужные переменные в файле variables.tf, обязательно указывайте тип переменной. Заполните их **default** прежними значениями из main.tf. 
 3. Проверьте terraform plan. Изменений быть не должно. 
-
-[variables.tf]()
-
-[main.tf]()
 
 ### Задание 3
 
@@ -65,6 +59,13 @@ resource "yandex_compute_instance" "platform" {
 2. Скопируйте блок ресурса и создайте с его помощью вторую ВМ в файле main.tf: **"netology-develop-platform-db"** ,  ```cores  = 2, memory = 2, core_fraction = 20```. Объявите её переменные с префиксом **vm_db_** в том же файле ('vms_platform.tf').  ВМ должна работать в зоне "ru-central1-b"
 3. Примените изменения.
 
+[main.tf]()
+
+[variables.tf]()
+
+[vms_platform.tf]()
+
+![](https://github.com/netolearning777/git-terraform-hw/blob/main/02/img/2026-11-19_14-02-22.png)
 
 ### Задание 4
 
