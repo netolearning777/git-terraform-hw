@@ -74,6 +74,10 @@ resource "yandex_compute_instance" "platform" {
 
 В качестве решения приложите вывод значений ip-адресов команды ```terraform output```.
 
+<em>
+netology-develop-platform-web "external_ip" = "62.84.117.120" 
+netology-develop-platform-db "external_ip" = ""
+</em>
 
 ### Задание 5
 
