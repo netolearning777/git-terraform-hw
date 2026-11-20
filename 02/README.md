@@ -126,4 +126,12 @@ netology-develop-platform-db "external_ip" = ""
 5. Найдите и закоментируйте все, более не используемые переменные проекта.
 6. Проверьте terraform plan. Изменений быть не должно.
 
+[main.tf]()
+
+[vms_platform.tf]()
+
+![](https://github.com/netolearning777/git-terraform-hw/blob/main/02/img/2026-11-20_09-22-31.png)
+
+![](https://github.com/netolearning777/git-terraform-hw/blob/main/02/img/VirtualBox_ubuntu-desktop-24_20_11_2026_09_22_48.png)
+
 ------
